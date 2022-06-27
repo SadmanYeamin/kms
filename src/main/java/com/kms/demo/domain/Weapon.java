@@ -14,9 +14,6 @@ public class Weapon implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "uid")
-    private Long uid;
-
     @Column(name = "weapon_type")
     private String weaponType;
 
@@ -34,9 +31,8 @@ public class Weapon implements Serializable {
 
     public Weapon() {}
 
-    public Weapon(Long id, Long uid, String weaponType, String weaponName, String buttNo, Long assignedTo, boolean isAssigned) {
+    public Weapon(Long id, String weaponType, String weaponName, String buttNo, Long assignedTo, boolean isAssigned) {
         this.id = id;
-        this.uid = uid;
         this.weaponType = weaponType;
         this.weaponName = weaponName;
         this.buttNo = buttNo;
@@ -57,14 +53,6 @@ public class Weapon implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getUid() {
-        return uid;
-    }
-
-    public void setUid(Long uid) {
-        this.uid = uid;
     }
 
     public String getWeaponType() {
@@ -113,8 +101,6 @@ public class Weapon implements Serializable {
             "Weapon{" +
             "id=" +
             id +
-            ", uid=" +
-            uid +
             ", weaponType='" +
             weaponType +
             '\'' +

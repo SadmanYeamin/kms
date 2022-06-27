@@ -14,7 +14,8 @@
             <column name="weapon_id" type="bigint"/>
             <column name="assignee_name" type="varchar(60)"/>
             <column name="assignee_id" type="varchar(50)"/>
-            <column name="assign_time" defaultValueComputed="CURRENT_TIMESTAMP"  type="TIMESTAMP"/>
+            <column name="assign_time"  type="TIMESTAMP"/>
+            <column name="deposit_time"  type="TIMESTAMP"/>
         </createTable>
     </changeSet>
 </databaseChangeLog>
